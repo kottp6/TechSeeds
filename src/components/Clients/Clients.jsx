@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import image from "../../assets/person.png";
 
@@ -12,6 +12,15 @@ const instructors = [
 ];
 
 const Clients = () => {
+  const sliderRef = useRef();
+  const [width, setWidth] = useState(0);
+
+  useEffect(() => {
+    const scrollWidth = sliderRef.current?.scrollWidth || 0;
+    const offsetWidth = sliderRef.current?.offsetWidth || 0;
+    setWidth(scrollWidth - offsetWidth);
+  }, []);
+
   return (
     <div className='mt-[5rem] max-w-[1440px] mx-auto capitalize mb-[6.28rem] px-4'>
       <div className='max-w-[90rem] mx-auto'>
@@ -20,11 +29,14 @@ const Clients = () => {
         </h2>
 
         {/* Scrollable Cards with Drag Motion */}
-        <div className='overflow-hidden cursor-grab active:cursor-grabbing'>
+        <motion.div
+          ref={sliderRef}
+          className='cursor-grab active:cursor-grabbing overflow-x-auto scrollbar-hide'
+        >
           <motion.div
             drag="x"
-            dragConstraints={{ left: -1000, right: 0 }}
-            className='flex gap-6 pb-4'
+            dragConstraints={{ right: 0, left: -width }}
+            className='flex gap-6 w-max'
           >
             {instructors.map((instructor, index) => (
               <motion.div
@@ -33,7 +45,7 @@ const Clients = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="w-[22rem] h-[26rem] bg-white flex-shrink-0 flex flex-col items-center shadow-md rounded-xl p-6"
+                className="w-[18rem] min-w-[18rem] sm:w-[22rem] sm:min-w-[22rem] h-[26rem] bg-white flex-shrink-0 flex flex-col items-center shadow-md rounded-xl p-6"
               >
                 <img
                   src={image}
@@ -52,7 +64,7 @@ const Clients = () => {
               </motion.div>
             ))}
           </motion.div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
