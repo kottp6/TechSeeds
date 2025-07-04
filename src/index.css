@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+body, html {
+  overflow-x: hidden;
+}
+
+
+@font-face {
+  font-family: 'MyFont';
+  src: url('./assets/fonts/RESEGRG_.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
