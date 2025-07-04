@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { VscChevronRight, VscChevronLeft } from "react-icons/vsc";
+import { motion } from 'framer-motion';
 import image from "../../assets/person.png";
 
 const instructors = [
@@ -12,18 +12,6 @@ const instructors = [
 ];
 
 const Clients = () => {
-  const scrollRef = useRef(null);
-
-  const scroll = (direction) => {
-    if (scrollRef.current) {
-      const amount = 300;
-      scrollRef.current.scrollBy({
-        left: direction === 'left' ? -amount : amount,
-        behavior: 'smooth',
-      });
-    }
-  };
-
   return (
     <div className='mt-[5rem] max-w-[1440px] mx-auto capitalize mb-[6.28rem] px-4'>
       <div className='max-w-[90rem] mx-auto'>
@@ -31,15 +19,20 @@ const Clients = () => {
           meet our instructors
         </h2>
 
-        {/* Scrollable Cards */}
-        <div className='overflow-hidden'>
-          <div
-            ref={scrollRef}
-            className='flex gap-6 overflow-x-auto scroll-smooth pb-4 scrollbar-hide'
+        {/* Scrollable Cards with Drag Motion */}
+        <div className='overflow-hidden cursor-grab active:cursor-grabbing'>
+          <motion.div
+            drag="x"
+            dragConstraints={{ left: -1000, right: 0 }}
+            className='flex gap-6 pb-4'
           >
             {instructors.map((instructor, index) => (
-              <div
+              <motion.div
                 key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
                 className="w-[22rem] h-[26rem] bg-white flex-shrink-0 flex flex-col items-center shadow-md rounded-xl p-6"
               >
                 <img
@@ -56,25 +49,9 @@ const Clients = () => {
                 <p className='mt-6 text-base text-[#333333] text-center leading-relaxed'>
                   {instructor.quote}
                 </p>
-              </div>
+              </motion.div>
             ))}
-          </div>
-        </div>
-
-        {/* Arrows Under Section */}
-        <div className='flex justify-center gap-4 mt-6'>
-          <button
-            onClick={() => scroll('left')}
-            className='p-5 bg-[#09B451] text-white rounded-full hover:bg-[#068a3f]'
-          >
-            <VscChevronLeft className='text-2xl' />
-          </button>
-          <button
-            onClick={() => scroll('right')}
-            className='p-5 bg-[#09B451] text-white rounded-full hover:bg-[#068a3f]'
-          >
-            <VscChevronRight className='text-2xl' />
-          </button>
+          </motion.div>
         </div>
       </div>
     </div>

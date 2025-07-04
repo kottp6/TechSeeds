@@ -36,13 +36,32 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Dropdown Menu */}
-      {isOpen && (
-        <div className="md:hidden px-6 pb-4 space-y-4 bg-white shadow-inner">
-          <div className="text-gray-800 font-medium">Learning Tracks</div>
-          <div className="text-gray-800 font-medium">Our Instructors</div>
-          <div className="text-gray-800 font-medium">Contact Us</div>
-        </div>
-      )}
+      {/* Mobile Dropdown Menu */}
+{isOpen && (
+  <div className="md:hidden px-6 pb-4 space-y-4 bg-white shadow-inner">
+    <Link
+      to="/ourlearning"
+      onClick={() => setIsOpen(false)}
+      className="block py-2 text-gray-800 font-medium hover:text-green-600 transition"
+    >
+      Learning Tracks
+    </Link>
+    <Link
+      to="/instructors"
+      onClick={() => setIsOpen(false)}
+      className="block py-2 text-gray-800 font-medium hover:text-green-600 transition"
+    >
+      Our Instructors
+    </Link>
+    <Link
+      to="/contact"
+      onClick={() => setIsOpen(false)}
+      className="block text-gray-800 font-medium hover:text-green-600 transition"
+    >
+      Contact Us
+    </Link>
+  </div>
+)}
     </header>
   );
 }
