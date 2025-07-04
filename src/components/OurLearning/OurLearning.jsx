@@ -23,7 +23,7 @@ export const OurLearning = () => {
         >
           <p className='w-[2.625rem] inline text-sm'>home</p>
           <PiGreaterThanLight className='inline text-[#9DA4AE]' />
-          <span className='w-[5.75] text-[#9DA4AE] text-sm'>learning track</span>
+          <span className='w-[7.5rem] text-[#9DA4AE] text-sm'>learning track</span>
         </motion.div>
 
         <motion.div
