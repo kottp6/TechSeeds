@@ -87,10 +87,10 @@ export const Register = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
-      className='w-full mx-auto mt-[5rem] px-4 capitalize'
+      className='w-[76rem] mx-auto mt-[5rem] px-4 capitalize'
     >
       <div className='max-w-[90rem] mx-auto'>
-        <h1 className='w-[34.5rem] md:text-6xl text-3xl font-semibold tracking-tight mb-6'>
+        <h1 className='w-[34.5rem] tracking-tighter md:text-6xl text-3xl font-semibold tracking-tight mb-6'>
           Enrol for a track now
         </h1>
 
@@ -120,9 +120,9 @@ export const Register = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className='relative w-full max-w-[36.7rem] mt-[5.125rem] bg-white rounded-3xl shadow-[0_0_1.5625rem_0_#1118272E]'
+            className='relative w-[22.75rem] md:w-full max-w-[36.7rem] mt-[5.125rem] bg-white rounded-3xl shadow-[0_0_1.5625rem_0_#1118272E]'
           >
-            <div className='absolute top-[-6.25rem] right-[1.4375rem] w-[21.56rem] h-[6.25rem] bg-[#6D428F] flex flex-col items-center justify-center'>
+            <div className='absolute top-[-5rem] right-[1.4375rem] w-[21.56rem] h-[5rem] bg-[#6D428F] flex flex-col items-center justify-center'>
               <p className='text-white text-2xl font-medium'>Book Now 20% OFF</p>
               <p className='text-white text-xl font-medium'>10% Extra Discount for Siblings</p>
             </div>
@@ -131,9 +131,9 @@ export const Register = () => {
               Registration for enrolment
             </h3>
 
-            <form className="ml-[2.5rem] max-w-[36.7rem] w-full pb-20" onSubmit={handleSubmit}>
+            <form className="ml-[2.5rem] md:w-full  pb-20" onSubmit={handleSubmit}>
               {/* Name */}
-              <div className="group relative w-[80%] md:w-[90%] max-w-[32.8rem] mt-16">
+              <div className="group relative w-[80%] md:w-[90%] max-w-[32.8rem] mt-8">
                 <input
                   required
                   minLength={3}
@@ -144,7 +144,7 @@ export const Register = () => {
                   value={formData.username}
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  className="peer w-full h-[3.75rem] px-4 py-2 text-lg border border-gray-300 rounded-md outline-none hover:border-[#8a93a8] transition-all duration-300"
+                  className="peer  w-full h-[3.75rem] px-4 py-2 text-lg border border-gray-300 rounded-md outline-none hover:border-[#8a93a8] transition-all duration-300"
                 />
                 <span className="absolute bottom-0 left-1/2 w-0 h-[0.125rem] bg-[#1B8354] transition-all duration-500 group-focus-within:left-0 group-focus-within:w-full"></span>
               </div>

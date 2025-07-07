@@ -32,14 +32,14 @@ export default function VideoSection() {
       </div>
 
       {/* ✅ Main Content with Motion */}
-      <div className="max-w-[90rem] w-full mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-[2.5rem] py-[2.5rem] z-20 relative md:-top-[10rem]">
+      <div className="max-w-[90rem] w-full mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-[1rem] py-[2.5rem] z-20 relative md:-top-[8rem]">
         {/* 🎬 Video with motion */}
         <motion.div
           initial={{ opacity: 0, x: -3.75 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="w-full max-w-[30rem] md:h-[30rem] bg-gray-200 rounded-xl overflow-hidden flex items-center justify-center mx-auto"
+          className="w-full max-w-[32.0625rem] md:h-[32.3125rem] bg-gray-200 rounded-xl overflow-hidden flex items-center justify-center mx-auto"
         >
           <video
             className="w-full h-full object-cover rounded-xl"
@@ -58,9 +58,9 @@ export default function VideoSection() {
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
           className="text-black font-semibold text-[3rem] sm:text-[1.5rem] leading-[2rem] sm:leading-[2.5rem] max-w-[28rem] mx-auto text-center md:text-left 
-          relative md:top-[10rem] top-[5rem]"
+          relative md:top-[12rem] top-[5rem]"
         >
-          <p className="text-[1.875rem] leading-[4rem]">
+          <p className="leading-[3rem] md:font-[700]  text-2xl">
             <span className="text-gray-800">We dream of</span>{" "}
             <span className="text-black">better education</span> for all the
             children in the world.

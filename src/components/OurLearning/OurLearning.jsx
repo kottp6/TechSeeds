@@ -9,9 +9,16 @@ import empty from '../../assets/RatingStarempty.png';
 import frame1 from '../../assets/Frame_6520.png';
 import frame2 from '../../assets/Frame_people.png';
 import './learning.css';
+import Navbar from '../Navbar/Navbar';
+import { Link } from 'react-router-dom';
+
+
 
 export const OurLearning = () => {
   return (
+    <>
+    <Navbar />
+    
     <div className='max-w-[90rem] min-h-full lg:min-h-0 lg:h-auto mx-auto capitalize cont-1024'>
       <div className='max-w-[76rem] mx-auto mt-6 h-auto lg:h-[112.3rem]  mb-[6.25rem] bg-white'>
 
@@ -21,9 +28,9 @@ export const OurLearning = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <p className='w-[2.625rem] inline text-sm'>home</p>
-          <PiGreaterThanLight className='inline text-[#9DA4AE]' />
-          <span className='w-[7.5rem] text-[#9DA4AE] text-sm'>learning track</span>
+          <div className="text-sm text-gray-600 mb-4">
+        <Link to="/" className="text-gray-800 font-medium">Home</Link> &gt; Learning Tracks
+      </div>
         </motion.div>
 
         <motion.div
@@ -32,10 +39,10 @@ export const OurLearning = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className='w-[21.19rem] text-[2.25rem] font-[600] tracking-[-0.09rem] text-[#1F2A37]'>learning track name</h2>
-          <button className='hover:bg-[#166A45] active:bg-[#104631] capitalize text-white w-[16.875rem] h-[3.75rem] rounded-[4px] bg-[#1B8354] text-whitebg-[#1B8354] font-[400]'>
+          <h2 className='w-[21.19rem] mt-[1.5rem] text-[2.25rem] font-[600] tracking-[-0.09rem] text-[#1F2A37]'>learning track name</h2>
+          <Link to="/" className='hover:bg-[#166A45] active:bg-[#104631] flex items-center justify-center capitalize text-white w-[16.875rem] h-[3.75rem] rounded-[4px] bg-[#1B8354] text-whitebg-[#1B8354] font-[400]'>
             book your kid seat <span className='w-[24px] h-[24px] ml-1'><FaArrowRight className='inline' /></span>
-          </button>
+          </Link>
         </motion.div>
 
         <motion.div
@@ -131,5 +138,6 @@ export const OurLearning = () => {
         </motion.div>
       </div>
     </div>
+    </>
   );
 };

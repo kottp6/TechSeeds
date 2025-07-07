@@ -45,7 +45,7 @@ const Clients = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="w-[18rem] min-w-[18rem] sm:w-[22rem] sm:min-w-[22rem] h-[26rem] bg-white flex-shrink-0 flex flex-col items-center shadow-md rounded-xl p-6"
+                className="w-[24.4rem]  h-[23.22rem]   bg-white flex-shrink-0 flex flex-col items-center shadow-md rounded-xl p-6"
               >
                 <img
                   src={image}

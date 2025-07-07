@@ -58,7 +58,7 @@ export default function StudentsProjects() {
   };
 
   return (
-    <section className="max-w-[1440px] mx-auto my-16 px-4 mt-[5rem]">
+    <section className="max-w-[77.5rem] mx-auto my-16 px-4 mt-[5rem]">
       <h1 className="text-center text-4xl font-bold mb-10">Our Students Projects</h1>
       <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-10">
         {/* Left Title & Controls */}
@@ -114,9 +114,9 @@ export default function StudentsProjects() {
             {videos.map((video, index) => (
               <div
                 key={index}
-                className="min-w-[28rem] max-w-[28rem] bg-white shadow-md rounded-xl overflow-hidden"
+                className="min-w-[24.5rem] max-w-[28rem] bg-white shadow-md rounded-xl overflow-hidden"
               >
-                <div className="w-full h-[18rem] bg-gray-200">
+                <div className="w-[24.5rem] h-[20.9375rem] bg-gray-200">
                   <video
                     src={video.src}
                     className="w-full h-full object-cover"

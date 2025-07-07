@@ -30,7 +30,7 @@ export default function FeatureList() {
               <img
                 src={feature.icon}
                 alt={feature.title}
-                className="w-[1.25rem] h-[1.25rem] object-contain"
+                className="w-[1.5rem] h-[1.5rem] object-contain"
               />
             </div>
             <span className="text-sm font-semibold text-gray-800">

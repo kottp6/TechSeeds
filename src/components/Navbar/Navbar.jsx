@@ -7,7 +7,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="bg-white w-full shadow-sm sticky top-0 z-50">
+    <header className="bg-white w-full  sticky top-0 z-50">
       <div className="max-w-[1440px] mx-auto px-6 py-4 flex items-center justify-between">
         {/* Left Section: Logo + Nav */}
         <div className="flex items-center space-x-10">
@@ -19,15 +19,20 @@ export default function Navbar() {
 
           {/* Navigation Links beside logo */}
           <ul className="hidden md:flex items-center space-x-6 text-sm font-semibold text-gray-800">
-            <Link to="/ourlearning" className="cursor-pointer hover:text-green-600 transition">Learning Tracks</Link>
-            <Link to="/instructors" className="cursor-pointer hover:text-green-600 transition">Our Instructors</Link>
+            <Link to="/ourcourses" className="cursor-pointer hover:text-green-600 transition">Learning Tracks</Link>
+            <Link to="#" className="cursor-pointer hover:text-green-600 transition">Our Instructors</Link>
           </ul>
         </div>
 
         {/* Right Section: Contact Us */}
+        <div className="flex items-center justify-between space-x-6">
         <div className="hidden md:block text-sm font-semibold text-gray-800 cursor-pointer hover:text-green-600 transition">
           Contact Us
         </div>
+        <div className="hidden md:block text-sm font-semibold text-gray-800 cursor-pointer hover:text-green-600 transition">
+          عربي
+        </div>
+    </div>
 
         {/* Mobile Button */}
         <button onClick={() => setIsOpen(!isOpen)} className="md:hidden text-gray-700">
@@ -47,7 +52,7 @@ export default function Navbar() {
       Learning Tracks
     </Link>
     <Link
-      to="/instructors"
+      to="/ourcourses"
       onClick={() => setIsOpen(false)}
       className="block py-2 text-gray-800 font-medium hover:text-green-600 transition"
     >
@@ -60,6 +65,7 @@ export default function Navbar() {
     >
       Contact Us
     </Link>
+    
   </div>
 )}
     </header>
