@@ -45,14 +45,14 @@ export default function Navbar() {
 {isOpen && (
   <div className="md:hidden px-6 pb-4 space-y-4 bg-white shadow-inner">
     <Link
-      to="/ourlearning"
+      to="/ourcourses"
       onClick={() => setIsOpen(false)}
       className="block py-2 text-gray-800 font-medium hover:text-green-600 transition"
     >
       Learning Tracks
     </Link>
     <Link
-      to="/ourcourses"
+      to="#"
       onClick={() => setIsOpen(false)}
       className="block py-2 text-gray-800 font-medium hover:text-green-600 transition"
     >

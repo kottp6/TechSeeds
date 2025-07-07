@@ -22,50 +22,48 @@ const Clients = () => {
   }, []);
 
   return (
-    <div className='mt-[5rem] max-w-[1440px] mx-auto capitalize mb-[6.28rem] px-4'>
-      <div className='max-w-[90rem] mx-auto'>
-        <h2 className='font-[600] text-4xl tracking-[-0.1rem] mb-6 text-center'>
-          meet our instructors
-        </h2>
+    <div className="mt-20 max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 mb-24">
+      <h2 className="text-center text-2xl sm:text-3xl md:text-4xl font-semibold mb-6 tracking-tight">
+        Meet Our Instructors
+      </h2>
 
-        {/* Scrollable Cards with Drag Motion */}
+      {/* Scrollable Cards */}
+      <motion.div
+        ref={sliderRef}
+        className="overflow-x-auto overflow-y-hidden scrollbar-hide cursor-grab active:cursor-grabbing py-10"
+      >
         <motion.div
-          ref={sliderRef}
-          className='cursor-grab active:cursor-grabbing overflow-x-auto scrollbar-hide'
+          drag="x"
+          dragConstraints={{ right: 0, left: -width }}
+          className="flex gap-6 w-max"
         >
-          <motion.div
-            drag="x"
-            dragConstraints={{ right: 0, left: -width }}
-            className='flex gap-6 w-max'
-          >
-            {instructors.map((instructor, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="w-[24.4rem]  h-[23.22rem]   bg-white flex-shrink-0 flex flex-col items-center shadow-md rounded-xl p-6"
-              >
-                <img
-                  src={image}
-                  alt={`${instructor.name} photo`}
-                  className='w-[7.12rem] h-[7.12rem] rounded-full'
-                />
-                <p className='font-[600] text-xl text-[#333333] mt-4 text-center'>
-                  {instructor.name}
-                </p>
-                <p className='font-[500] text-base text-[#09B451] text-center mt-[6px]'>
-                  {instructor.role}
-                </p>
-                <p className='mt-6 text-base text-[#333333] text-center leading-relaxed'>
-                  {instructor.quote}
-                </p>
-              </motion.div>
-            ))}
-          </motion.div>
+          {instructors.map((instructor, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="min-w-[90vw] sm:min-w-[20rem] max-w-sm bg-white flex-shrink-0 shadow-md rounded-xl p-6 flex flex-col items-center text-center"
+            >
+              <img
+                src={image}
+                alt={`${instructor.name} photo`}
+                className="w-24 h-24 rounded-full object-cover"
+              />
+              <p className="font-semibold text-lg text-gray-800 mt-4">
+                {instructor.name}
+              </p>
+              <p className="font-medium text-[#09B451] mt-1 text-sm sm:text-base">
+                {instructor.role}
+              </p>
+              <p className="mt-4 text-gray-700 text-sm sm:text-base leading-relaxed">
+                {instructor.quote}
+              </p>
+            </motion.div>
+          ))}
         </motion.div>
-      </div>
+      </motion.div>
     </div>
   );
 };
