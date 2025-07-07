@@ -59,7 +59,8 @@ export default function Hero() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1 }}
         >
-          <div className="absolute w-20 md:w-28 h-[30rem] py-20 bg-[#E4FFFF] rounded-s-2xl right-5 translate-x-[50%] md:translate-x-[20%] z-0 hidden sm:block" />
+          <div className="absolute w-20 md:w-28 h-[34rem] py-20 bg-[#E4FFFF] rounded-tr-[10%] rounded-br-[10%] right-5 translate-x-[50%] md:translate-x-[20%] z-0 hidden sm:block" />
+
 
           <div className="relative w-full max-w-xs sm:max-w-md md:max-w-lg">
             {/* Decorative avatars */}
