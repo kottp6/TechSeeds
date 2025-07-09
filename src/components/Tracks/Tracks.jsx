@@ -31,7 +31,7 @@ const cardVariants = {
 export default function Tracks() {
   return (
     <motion.div
-      className="w-full max-w-6xl mx-auto px-4 py-12 capitalize"
+      className="w-full max-w-6xl mx-auto px-4 py-12 capitalize select-none"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}

@@ -22,8 +22,8 @@ const Clients = () => {
   }, []);
 
   return (
-    <div className="mt-20 max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 mb-24">
-      <h2 className="text-center text-2xl sm:text-3xl md:text-4xl font-semibold mb-6 tracking-tight">
+    <div className="select-none mt-20 max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 mb-24">
+      <h2 className="text-2xl text-[#1F2A37] sm:text-3xl md:text-4xl font-semibold mb-6 tracking-tight">
         Meet Our Instructors
       </h2>
 
@@ -44,20 +44,20 @@ const Clients = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="min-w-[90vw] sm:min-w-[20rem] max-w-sm bg-white flex-shrink-0 shadow-md rounded-xl p-6 flex flex-col items-center text-center"
+              className="min-w-[90vw] sm:min-w-[20rem] max-w-sm bg-white flex-shrink-0 shadow-lg shadow-[#CBCBCB] rounded-xl p-6 flex flex-col items-center text-center"
             >
               <img
                 src={image}
                 alt={`${instructor.name} photo`}
                 className="w-24 h-24 rounded-full object-cover"
               />
-              <p className="font-semibold text-lg text-gray-800 mt-4">
+              <p className="font-semibold text-lg text-[#333333] mt-4">
                 {instructor.name}
               </p>
               <p className="font-medium text-[#09B451] mt-1 text-sm sm:text-base">
                 {instructor.role}
               </p>
-              <p className="mt-4 text-gray-700 text-sm sm:text-base leading-relaxed">
+              <p className="mt-4 text-[#333333] text-sm sm:text-base leading-relaxed">
                 {instructor.quote}
               </p>
             </motion.div>

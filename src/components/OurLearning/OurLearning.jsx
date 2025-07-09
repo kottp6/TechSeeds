@@ -19,7 +19,7 @@ export const OurLearning = () => {
     <>
     <Navbar />
     
-    <div className='max-w-[90rem] min-h-full lg:min-h-0 lg:h-auto mx-auto capitalize cont-1024'>
+    <div className='select-none max-w-[90rem] min-h-full lg:min-h-0 lg:h-auto mx-auto capitalize cont-1024'>
       <div className='max-w-[76rem] mx-auto mt-6 h-auto lg:h-[112.3rem]  mb-[6.25rem] bg-white'>
 
         <motion.div

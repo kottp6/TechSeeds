@@ -58,8 +58,8 @@ export default function StudentsProjects() {
   };
 
   return (
-    <section className="max-w-[77.5rem] mx-auto my-16 px-4 mt-[5rem]">
-      <h1 className="text-center text-4xl font-bold mb-10">Our Students Projects</h1>
+    <section className="select-none max-w-[77.5rem] mx-auto my-16 px-4 mt-[5rem]">
+      <h1 className="text-center text-[#1F2A37] text-4xl font-bold mb-10">Our Students Projects</h1>
       <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-10">
         {/* Left Title & Controls */}
         <div className="flex flex-col items-center lg:items-start gap-6 w-full lg:w-[30%]">
@@ -103,33 +103,34 @@ export default function StudentsProjects() {
 
         {/* Right Video Cards with drag-to-scroll */}
         <div className="w-full lg:w-[65%] overflow-hidden">
-          <div
-            ref={scrollRef}
-            onMouseDown={handleMouseDown}
-            onMouseLeave={handleMouseLeave}
-            onMouseUp={handleMouseUp}
-            onMouseMove={handleMouseMove}
-            className="flex gap-6 overflow-x-auto scroll-smooth cursor-grab active:cursor-grabbing select-none scrollbar-hide"
-          >
-            {videos.map((video, index) => (
-              <div
-                key={index}
-                className="min-w-[24.5rem] max-w-[28rem] bg-white shadow-md rounded-xl overflow-hidden"
-              >
-                <div className="w-[24.5rem] h-[20.9375rem] bg-gray-200">
-                  <video
-                    src={video.src}
-                    className="w-full h-full object-cover"
-                    controls
-                  />
-                </div>
-                <div className="p-4 text-center font-medium text-gray-800">
-                  {video.name}
-                </div>
-              </div>
-            ))}
-          </div>
+  <div
+    ref={scrollRef}
+    onMouseDown={handleMouseDown}
+    onMouseLeave={handleMouseLeave}
+    onMouseUp={handleMouseUp}
+    onMouseMove={handleMouseMove}
+    className="flex gap-6 overflow-x-auto scroll-smooth cursor-grab active:cursor-grabbing select-none scrollbar-hide px-2"
+  >
+    {videos.map((video, index) => (
+      <div
+        key={index}
+        className="flex-shrink-0 w-[24rem] bg-white shadow-md rounded-xl overflow-hidden mb-10"
+      >
+        <div className="w-full h-[20rem] bg-gray-200">
+          <video
+            src={video.src}
+            className="w-full h-full object-cover"
+            controls
+          />
         </div>
+        <div className="p-4  font-medium text-gray-800">
+          {video.name}
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+
       </div>
     </section>
   );

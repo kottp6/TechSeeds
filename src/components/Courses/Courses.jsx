@@ -72,7 +72,7 @@ const TrackSection = ({ title, subtitle, data }) => {
 
   return (
     <motion.div
-      className="mt-12"
+      className="mt-12 select-none"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}

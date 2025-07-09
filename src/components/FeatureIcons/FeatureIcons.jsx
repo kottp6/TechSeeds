@@ -15,7 +15,7 @@ const features = [
 
 export default function FeatureList() {
   return (
-    <section className="px-[1rem] py-[2rem]">
+    <section className="px-[1rem] py-[2rem] select-none">
       <div className="max-w-[90rem] mx-auto flex flex-wrap justify-center sm:justify-between items-center gap-[1.5rem]">
         {features.map((feature, index) => (
           <motion.div
@@ -26,7 +26,7 @@ export default function FeatureList() {
             transition={{ duration: 0.5, delay: index * 0.1 }}
             viewport={{ once: true }}
           >
-            <div className="bg-green-600 w-[2.5rem] h-[2.5rem] rounded-full flex items-center justify-center">
+            <div className="bg-[#09B451] w-[2.5rem] h-[2.5rem] rounded-full flex items-center justify-center">
               <img
                 src={feature.icon}
                 alt={feature.title}

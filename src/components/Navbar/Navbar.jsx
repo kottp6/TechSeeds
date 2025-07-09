@@ -12,10 +12,10 @@ export default function Navbar() {
         {/* Left Section: Logo + Nav */}
         <div className="flex items-center space-x-10">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-2">
             <img src={logo} alt="Logo" className="w-10 h-10 object-contain" />
             <span className="text-xl font-semibold text-black">Tech Seeds</span>
-          </div>
+          </Link>
 
           {/* Navigation Links beside logo */}
           <ul className="hidden md:flex items-center space-x-6 text-sm font-semibold text-gray-800">

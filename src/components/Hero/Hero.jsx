@@ -11,7 +11,7 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen px-4 py-12 md:-mb-10 overflow-hidden">
+    <section className="min-h-screen px-4 py-12 md:-mb-10 overflow-hidden select-none">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 items-center gap-12 md:gap-20">
         {/* Left Section */}
         <motion.div
@@ -43,8 +43,10 @@ export default function Hero() {
           </p>
 
           <button
-            className="bg-green-700 text-white w-full sm:w-64 h-14 px-6 py-3 rounded-md font-medium 
-            hover:bg-green-800 focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 
+            className="bg-[#1B8354] text-white w-full sm:w-64 h-14 px-6 py-3 rounded-md font-medium 
+            hover:bg-[#166A45] focus:outline-none focus:ring-2 focus:ring-[#1B8354] focus:ring-offset-2 
+            pressed:bg-[#104631]
+            disabled:bg-[#E5E7EB] disabled:opacity-50
             active:bg-green-900 transition duration-200 ease-in-out flex items-center justify-center space-x-2"
           >
             <span>Book your kid’s seat</span>
@@ -59,7 +61,7 @@ export default function Hero() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1 }}
         >
-          <div className="absolute w-20 md:w-28 h-[34rem] py-20 bg-[#E4FFFF] rounded-tr-[10%] rounded-br-[10%] right-5 translate-x-[50%] md:translate-x-[20%] z-0 hidden sm:block" />
+          <div className="absolute w-20 md:w-[6.688rem] h-[37.813rem] py-20 bg-[#E4FFFF] rounded-[0rem_3rem_3rem_0rem]   right-5 translate-x-[50%] md:translate-x-[20%] z-0 hidden sm:block" />
 
 
           <div className="relative w-full max-w-xs sm:max-w-md md:max-w-lg">
@@ -70,7 +72,7 @@ export default function Hero() {
 
             <div className="grid grid-cols-2 gap-4 sm:gap-6 z-10">
               <div className="aspect-square rounded-full bg-[#08A5E4] flex items-center justify-center overflow-hidden">
-                <img src={heroGirl} alt="Student" className="w-full h-full object-cover" />
+                <img src={heroGirl} alt="Student" className="w-[12rem] h-[16.483rem] object-cover" />
               </div>
               <div className="aspect-square rounded-xl bg-[#FDDF2F] flex items-center justify-center overflow-hidden">
                 <img src={heroGrad} alt="Graduate" className="w-full h-full object-cover" />
@@ -78,13 +80,14 @@ export default function Hero() {
               <div className="aspect-square rounded-xl bg-[#A2BF00] flex items-center justify-center overflow-hidden">
                 <img src={heroLaptop} alt="Laptop" className="w-full h-full object-cover" />
               </div>
-              <div className="aspect-square rounded-[1.125rem_3rem_3rem_1.125rem] bg-[#EB420E] flex items-center justify-center overflow-hidden">
-                <img src={heroTeacher} alt="Teacher" className="w-[95%] h-[95%] object-cover rounded-full" />
+              <div className="aspect-square rounded-[1.125rem_34.149rem_34.149rem_1.125rem] bg-[#EB420E] flex items-center justify-center overflow-hidden">
+                <img src={heroTeacher} alt="Teacher" className="w-[95%] h-[95%] object-cover " />
               </div>
             </div>
 
             {/* Bottom floating info card */}
-            <div className="hidden sm:flex items-center justify-center text-lg font-semibold absolute -bottom-8 -left-[3.5rem] z-10 translate-x-[-50%] bg-white shadow-md rounded-lg px-5 py-4 w-[16rem] sm:w-72 h-[10rem] sm:h-[12rem]">
+            <div className="hidden sm:flex items-center justify-center text-lg font-semibold absolute -bottom-8 -left-[3.5rem] z-10 translate-x-[-50%] bg-white shadow-md 
+             px-5 py-4 w-[16rem] sm:w-72 h-[10rem] sm:h-[12rem] rounded-[0.875rem_0.875rem_1.875rem_0.875rem]">
               <div>
                 <p className="text-center text-2xl text-gray-700 font-semibold">
                   Learn from best <br />

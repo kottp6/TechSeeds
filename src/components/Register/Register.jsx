@@ -87,10 +87,10 @@ export const Register = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
-      className='w-[76rem] mx-auto mt-[5rem] px-4 capitalize'
+      className='w-[76rem] mx-auto mt-[5rem] px-4 capitalize select-none'
     >
       <div className='max-w-[90rem] mx-auto'>
-        <h1 className='w-[34.5rem] tracking-tighter md:text-6xl text-3xl font-semibold tracking-tight mb-6'>
+        <h1 className='w-[34.5rem] text-[#333333] tracking-tighter md:text-6xl text-3xl font-semibold tracking-tight mb-6'>
           Enrol for a track now
         </h1>
 
@@ -103,7 +103,7 @@ export const Register = () => {
             viewport={{ once: true }}
             className="flex flex-col"
           >
-            <h2 className='mt-[4rem] text-2xl md:text-4xl sm:text-5xl lg:text-6xl max-w-[22.75rem] md:max-w-[35rem] font-bold'>
+            <h2 className='text-[#333333] mt-[4rem] text-2xl md:text-4xl sm:text-5xl lg:text-6xl max-w-[22.75rem] md:max-w-[35rem] font-bold'>
               Take your child’s education to the next level
             </h2>
             <p className='mt-[5rem] h-[10rem] md:w-[33rem] w-[22.75rem] text-2xl text-[#333] font-normal leading-8'>
