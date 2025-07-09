@@ -59,9 +59,9 @@ export default function VideoSection() {
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
           className="text-[#1F2A37] font-[700] text-[2.25rem] md:text-[2.25rem] leading-[3.5rem] -tracking-[2%] max-w-[28rem] mx-auto text-center md:text-left 
-          relative md:top-[8rem] top-[5rem] md:w-[37.25rem] md:h-[5.5rem]"
+          relative md:top-[8rem] top-[1rem] md:w-[37.25rem] md:h-[5.5rem] -mt-10"
         >
-          <p className="md:font-[700] leading-[2.75rem]  text-2xl">
+          <p className="md:font-[700] md:leading-[2.75rem]  text-2xl">
             <span className="text-gray-800">We dream of</span>{" "}
             <span className="text-black">better education</span> for all the
             children in the world.
