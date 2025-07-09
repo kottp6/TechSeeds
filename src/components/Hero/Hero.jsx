@@ -72,7 +72,7 @@ export default function Hero() {
 
             <div className="grid grid-cols-2 gap-4 sm:gap-6 z-10">
               <div className="aspect-square rounded-full bg-[#08A5E4] flex items-center justify-center overflow-hidden">
-                <img src={heroGirl} alt="Student" className="w-[12rem] h-[16.483rem] object-cover" />
+                <img src={heroGirl} alt="Student" className="md:w-[12rem] w-[8rem] w-[8rem] md:h-[16.483rem] object-cover" />
               </div>
               <div className="aspect-square rounded-xl bg-[#FDDF2F] flex items-center justify-center overflow-hidden">
                 <img src={heroGrad} alt="Graduate" className="w-full h-full object-cover" />
