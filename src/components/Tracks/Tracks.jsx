@@ -56,7 +56,7 @@ export default function Tracks() {
       </motion.div>
 
       {/* Track Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <Link to="/ourlearning" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {tracksData.map((track, i) => (
           <motion.div
             key={track.id}
@@ -76,7 +76,7 @@ export default function Tracks() {
             </div>
           </motion.div>
         ))}
-      </div>
+      </Link>
     </motion.div>
   );
 }

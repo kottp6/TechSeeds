@@ -8,7 +8,7 @@ import trackImg4 from "../../assets/an arab girl learning ui design.png";
 import trackImg5 from "../../assets/an arab 6 years old kid learning cyber securety.png";
 import trackImg6 from "../../assets/a 12 years girl learning CSS.png";
 import Navbar from '../Navbar/Navbar';
-
+import Footer from '../Footer/Footer'
 // Sample Data
 const level1Data = [
   { id: 1, title: 'Learn Marketing from Top Instructors.', image: trackImg1 },
@@ -165,6 +165,7 @@ const Courses = () => {
         data={level3Data}
       />
     </div>
+    <Footer />
     </>
   );
 };

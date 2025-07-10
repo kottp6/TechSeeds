@@ -11,6 +11,7 @@ import frame2 from '../../assets/Frame_people.png';
 import './learning.css';
 import Navbar from '../Navbar/Navbar';
 import { Link } from 'react-router-dom';
+import Footer from '../Footer/Footer';
 
 
 
@@ -138,6 +139,7 @@ export const OurLearning = () => {
         </motion.div>
       </div>
     </div>
+    <Footer />
     </>
   );
 };
